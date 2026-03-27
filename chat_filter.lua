@@ -183,7 +183,7 @@ imgui.OnFrame(function() return win_filter[0] or win_history[0] end, function()
                         imgui.PushStyleColor(imgui.Col.Text, e.clr)
                         if imgui.Selectable(u8(e.msg) .. "##" .. i .. (tags_string or "")) then
                             setClipboardText(u8(e.msg))
-                            sampAddChatMessage("{00BFFF}[Filter]{FFFFFF} Copied (UTF-8)!", -1)
+                            sampAddChatMessage("{00BFFF}[Filter]{FFFFFF} Copied!", -1)
                         end
                         imgui.PopStyleColor()
                     end
@@ -208,7 +208,7 @@ function main()
     load()
     sampRegisterChatCommand("cf", function() win_filter[0] = not win_filter[0] end)
     sampRegisterChatCommand("ch", function() win_history[0] = not win_history[0] end)
-    sampAddChatMessage("{00BFFF}[Filter]{FFFFFF} v4.6 loaded. Tags separated by space.", -1)
+    sampAddChatMessage("{00BFFF}[Filter]{FFFFFF} v1.0 loaded. Tags separated by space.", -1)
     wait(-1)
 end
 
