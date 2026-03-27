@@ -26,7 +26,7 @@ local win_history = new.bool(false)
 
 local buf_add = new.char[256]()
 local buf_folder_name = new.char[64]()
-local buf_folder_tags = new.char[256]() -- Буфер для тегов через пробел
+local buf_folder_tags = new.char[256]()
 local buf_search = new.char[256]()
 
 function save()
